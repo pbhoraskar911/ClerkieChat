@@ -10,10 +10,10 @@ Technical Features
 - Firebase - for realtime user management, authentication and database.
 
 UI - 
-  - Coordinatore Lyout implementation
-  - Recycler views
-  - Charts
-  - Material Icons va Material Icon Generators
+- Coordinatore Lyout implementation
+- Recycler views
+- Charts
+- Material Icons va Material Icon Generators
 
 - Charts - MPAndroidChart library to display various data on charts.
     - Single Line Chart
