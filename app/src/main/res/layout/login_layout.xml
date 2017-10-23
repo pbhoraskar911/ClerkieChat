@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    style="@style/LoginTheme"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp"
+    >
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/userName"
+        style="@style/LoginTheme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:drawableEnd="@drawable/username"
+        android:drawablePadding="4dp"
+        android:hint="@string/username_hint"
+        android:inputType="text"
+        android:maxLines="1"
+        app:met_baseColor="@color/colorText"
+        app:met_floatingLabel="normal"
+        app:met_floatingLabelText="@string/username_hint"
+        app:met_floatingLabelTextColor="@color/colorText"
+        app:met_singleLineEllipsis="true"
+        app:met_textColor="@color/colorText"
+        app:met_underlineColor="@color/colorPrimary"
+        custom:layout_constraintLeft_toLeftOf="parent"
+        custom:layout_constraintRight_toRightOf="parent"
+        custom:layout_constraintTop_toTopOf="parent"/>
+
+    <com.rengwuxian.materialedittext.MaterialEditText
+        android:id="@+id/password"
+        style="@style/LoginTheme"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:drawableEnd="@drawable/password"
+        android:drawablePadding="4dp"
+        android:hint="@string/password_hint"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        app:met_baseColor="@color/colorText"
+        app:met_floatingLabel="normal"
+        app:met_floatingLabelText="@string/password_hint"
+        app:met_floatingLabelTextColor="@color/colorText"
+        app:met_maxCharacters="20"
+        app:met_textColor="@color/colorText"
+        app:met_underlineColor="@color/colorPrimary"
+        custom:layout_constraintLeft_toLeftOf="parent"
+        custom:layout_constraintRight_toRightOf="parent"
+        custom:layout_constraintTop_toBottomOf="@+id/userName"/>
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_login_drawable"
+        android:enabled="false"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:paddingEnd="48dp"
+        android:paddingStart="48dp"
+        android:paddingTop="16dp"
+        android:text="@string/login"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="@+id/password"
+        app:layout_constraintRight_toRightOf="@+id/password"
+        custom:layout_constraintTop_toBottomOf="@+id/password"/>
+
+    <ProgressBar
+        android:id="@+id/login_progress_bar"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/loginButton"/>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/login_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_gradient"
+    >
+
+    <TextView
+        android:id="@+id/label_app_name"
+        style="@style/LoginTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/label_login"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/app_title"
+        android:textColor="@color/colorText"
+        android:textSize="24sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/label_login"
+        style="@style/LoginTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/login_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="24dp"
+        android:text="@string/label_login"
+        android:textColor="@color/colorText"
+        android:textSize="24sp"/>
+
+    <include
+        android:id="@+id/login_layout"
+        layout="@layout/login_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        />
+
+    <TextView
+        android:id="@+id/label_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:text="@string/label_forgot_password"
+        android:textColor="@color/colorText"
+        android:textSize="13sp"
+        />
+
+    <Button
+        android:id="@+id/button_signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/background_gradient"
+        android:elevation="4dp"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text="@string/label_signup"
+        android:textColor="@color/colorText"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
+
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<RelativeLayout-->
+    <!--xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:id="@+id/login_relative_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:background="#263238"-->
+    <!--&gt;-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/label_app_name"-->
+    <!--style="@style/LoginTheme"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@+id/label_login"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="24dp"-->
+    <!--android:text="@string/app_title"-->
+    <!--android:textColor="@color/colorPrimaryDark"-->
+    <!--android:textSize="24sp"-->
+    <!--android:textStyle="bold"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/label_login"-->
+    <!--style="@style/LoginTheme"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_above="@+id/login_layout"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginBottom="24dp"-->
+    <!--android:text="@string/label_login"-->
+    <!--android:textColor="@color/colorPrimaryDark"-->
+    <!--android:textSize="24sp"/>-->
+
+    <!--<include-->
+    <!--android:id="@+id/login_layout"-->
+    <!--layout="@layout/login_layout"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/label_forgot_password"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@+id/login_layout"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_marginTop="16dp"-->
+    <!--android:text="@string/label_forgot_password"-->
+    <!--android:textColor="@color/colorPrimaryDark"-->
+    <!--android:textSize="13sp"-->
+    <!--/>-->
+
+    <!--<Button-->
+    <!--android:id="@+id/button_signup"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentBottom="true"-->
+    <!--android:background="@drawable/background_gradient"-->
+    <!--android:elevation="4dp"-->
+    <!--android:gravity="center"-->
+    <!--android:padding="6dp"-->
+    <!--android:text="@string/label_signup"-->
+    <!--android:textColor="@color/colorText"-->
+    <!--android:textSize="18sp"-->
+    <!--android:textStyle="bold"/>-->
+
+    <!--</RelativeLayout>-->

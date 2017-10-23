@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "888974365691",
+    "firebase_url": "https://clerkiechat.firebaseio.com",
+    "project_id": "clerkiechat",
+    "storage_bucket": "clerkiechat.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:888974365691:android:60d50d45fced1bf7",
+        "android_client_info": {
+          "package_name": "com.clerkiechat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "888974365691-7f606ufd0c44lo6a14m43mcvlahlcup1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.clerkiechat",
+            "certificate_hash": "196e706ced457f2ff70125950ef731f7a6b5b4ec"
+          }
+        },
+        {
+          "client_id": "888974365691-67opohnhgfauhp2ba3gp2fot6rcks5f6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRVThGU-tVCuT9y4802D5uTEtW5yTsHdU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "888974365691-67opohnhgfauhp2ba3gp2fot6rcks5f6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

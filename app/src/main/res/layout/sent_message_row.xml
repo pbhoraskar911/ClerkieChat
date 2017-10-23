@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="6dp">
+
+
+    <LinearLayout
+        android:id="@+id/sent_image_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sent_message_drawable"
+        android:gravity="clip_vertical"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+
+        <ImageView
+            android:id="@+id/sent_photoMessage"
+            android:layout_width="240dp"
+            android:layout_height="240dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="6dp"
+            android:adjustViewBounds="true"
+            />
+
+        <TextView
+            android:id="@+id/sent_image_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginBottom="6dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:fontFamily="sans-serif"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp"
+            tools:text="10.00 pm"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/text_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sent_message_drawable"
+        android:gravity="clip_vertical"
+        android:orientation="vertical"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sent_image_linear_layout"
+        >
+
+        <TextView
+            android:id="@+id/messageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:fontFamily="sans-serif"
+            android:gravity="start|center_vertical"
+            android:paddingBottom="6dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:paddingTop="6dp"
+            android:textColor="@color/colorPrimaryText"
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            tools:text="Message"/>
+
+        <TextView
+            android:id="@+id/sent_text_timestamp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:fontFamily="sans-serif"
+            android:paddingBottom="6dp"
+            android:paddingEnd="12dp"
+            android:paddingStart="12dp"
+            android:textColor="@color/colorPrimaryText"
+            android:textSize="12sp"
+            tools:text="10.00 pm"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="4dp"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_linear_layout"
+        tools:text="Name of Sender"/>
+
+</android.support.constraint.ConstraintLayout>

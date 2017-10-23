@@ -1,0 +1,139 @@
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.clerkiechat"
+    >
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:name=".di.ClerkieApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity
+            android:name=".ui.splashscreen.SplashScreenActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.userregistration.login.LoginActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity
+            android:name=".ui.userregistration.signup.SignUpActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity
+            android:name=".ui.userregistration.login.ForgotPasswordActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:theme="@style/FullScreen"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity
+            android:name=".ui.chatscreen.ChatScreenActivity"
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity
+            android:name=".ui.graphs.ChartScreenActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.chatscreen.ChatScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.chatscreen.ChatScreenActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ui.chatscreen.PhotoViewActivity"
+            android:launchMode="singleInstance"
+            android:theme="@style/FullScreen"
+            />
+
+        <activity
+            android:name=".ui.graphs.PieChartActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.graphs.ChartScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.graphs.ChartScreenActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ui.graphs.SingleLineChart"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.graphs.ChartScreenActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.graphs.ChartScreenActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ui.graphs.DoubleLineActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.graphs.ChartScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.graphs.ChartScreenActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ui.graphs.HorizontalBarChartActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.graphs.ChartScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.graphs.ChartScreenActivity"/>
+        </activity>
+
+        <activity
+            android:name=".ui.graphs.VerticalBarChartActivity"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.graphs.ChartScreenActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.graphs.ChartScreenActivity"/>
+        </activity>
+    </application>
+</manifest>

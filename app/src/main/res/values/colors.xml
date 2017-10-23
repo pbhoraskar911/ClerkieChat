@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#2196F3</color>
+    <color name="colorPrimaryDark">#1976D2</color>
+    <color name="colorAccent">#7C4DFF</color>
+    <color name="colorPrimaryLight">#90CAF9</color>
+    <color name="colorText">#FFFFFF</color>
+    <color name="colorPrimaryText">#212121</color>
+    <color name="colorDivider">#BDBDBD</color>
+    <color name="chat_background">#fafafa</color>
+
+    <!--Main Gradient colors-->
+    <color name="color_blue">#5c6bc0</color>
+    <color name="color_purple">#9575cd</color>
+    <color name="background">#212121</color>
+    <color name="background2">#263238</color>
+</resources>
