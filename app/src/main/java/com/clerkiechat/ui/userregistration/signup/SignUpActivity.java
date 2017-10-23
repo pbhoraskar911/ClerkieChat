@@ -1,5 +1,7 @@
 package com.clerkiechat.ui.userregistration.signup;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -79,8 +81,6 @@ public class SignUpActivity extends AppCompatActivity {
             nameOfUser = "";
         }
 
-        System.out.println("Name of user is : " + nameOfUser);
-
         if (!TextUtils.isEmpty(nameOfUser) && ViewUtils.checkEmailValidity(signupEmail)
                 && ViewUtils.checkPhoneValidity(signupPhone)
                 && ViewUtils.checkPasswordValidity(signupPassword)
@@ -107,7 +107,7 @@ public class SignUpActivity extends AppCompatActivity {
                 signupPhone.setError(getString(R.string.invalid_phone));
             }
             if (!ViewUtils.checkPasswordValidity(signupPassword)) {
-                signupPassword.setError(getString(R.string.invalid_password));
+                signupPassword.setError(getString(R.string.invalid_password_details));
             }
             if (!ViewUtils.checkPasswordValidity(signupConfirmPassword)) {
                 signupConfirmPassword.setError(getString(R.string.invalid_password));
@@ -135,7 +135,7 @@ public class SignUpActivity extends AppCompatActivity {
     private void createNewUserDetails(FirebaseUser user) {
         nameOfUser = signupName.getText().toString();
         createNewUser(user.getUid(), nameOfUser, user.getEmail());
-        navigateToChatScreen();
+        createLRegistrationDialog(R.string.registration_successful);
     }
 
     private void createNewUser(String userId, String nameOfUser, String email) {
@@ -148,8 +148,25 @@ public class SignUpActivity extends AppCompatActivity {
 
     private void navigateToChatScreen() {
         Intent intent = new Intent(SignUpActivity.this, ChatScreenActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
         finish();
+    }
+
+    public void createLRegistrationDialog(int title) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle(title);
+        builder.setCancelable(false);
+        builder.setPositiveButton(android.R.string.ok,
+                new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int id) {
+                        navigateToChatScreen();
+                        dialog.dismiss();
+                    }
+                });
+        AlertDialog dialog = builder.create();
+        dialog.show();
     }
 
     private void displaySnackBar(String title) {

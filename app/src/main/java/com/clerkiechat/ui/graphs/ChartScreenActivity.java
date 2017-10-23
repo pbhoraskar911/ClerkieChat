@@ -43,7 +43,8 @@ public class ChartScreenActivity extends AppCompatActivity {
     }
 
 
-    @OnClick({R.id.button_pie, R.id.button_single_line, R.id.button_double_line, R.id.button_vertical_bar, R.id.button_horizontal_bar})
+    @OnClick({R.id.button_pie, R.id.button_single_line, R.id.button_double_line,
+            R.id.button_vertical_bar, R.id.button_horizontal_bar})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.button_pie:
@@ -59,7 +60,8 @@ public class ChartScreenActivity extends AppCompatActivity {
                 startActivity(new Intent(ChartScreenActivity.this, VerticalBarChartActivity.class));
                 break;
             case R.id.button_horizontal_bar:
-                startActivity(new Intent(ChartScreenActivity.this, HorizontalBarChartActivity.class));
+                startActivity(new Intent(ChartScreenActivity.this,
+                        HorizontalBarChartActivity.class));
                 break;
         }
     }
@@ -72,10 +74,5 @@ public class ChartScreenActivity extends AppCompatActivity {
                 return true;
         }
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
     }
 }

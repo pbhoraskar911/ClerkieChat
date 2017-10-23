@@ -29,7 +29,6 @@
 
         <activity
             android:name=".ui.userregistration.login.LoginActivity"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:theme="@style/FullScreen"
             android:windowSoftInputMode="stateHidden"
@@ -37,7 +36,6 @@
 
         <activity
             android:name=".ui.userregistration.signup.SignUpActivity"
-            android:launchMode="singleInstance"
             android:screenOrientation="portrait"
             android:theme="@style/FullScreen"
             android:windowSoftInputMode="stateHidden"
@@ -45,40 +43,37 @@
 
         <activity
             android:name=".ui.userregistration.login.ForgotPasswordActivity"
-            android:launchMode="singleInstance"
+            android:parentActivityName=".ui.userregistration.login.LoginActivity"
             android:screenOrientation="portrait"
             android:theme="@style/FullScreen"
             android:windowSoftInputMode="stateHidden"
-            />
+            >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".ui.graphs.ChartScreenActivity"/>
+        </activity>
 
         <activity
             android:name=".ui.chatscreen.ChatScreenActivity"
-            android:launchMode="singleInstance"
+            android:launchMode="singleTop"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
             />
 
         <activity
             android:name=".ui.graphs.ChartScreenActivity"
-            android:launchMode="singleInstance"
-            android:parentActivityName=".ui.chatscreen.ChatScreenActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
             >
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".ui.chatscreen.ChatScreenActivity"/>
         </activity>
 
         <activity
             android:name=".ui.chatscreen.PhotoViewActivity"
-            android:launchMode="singleInstance"
             android:theme="@style/FullScreen"
             />
 
         <activity
             android:name=".ui.graphs.PieChartActivity"
-            android:launchMode="singleInstance"
             android:parentActivityName=".ui.graphs.ChartScreenActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
@@ -90,7 +85,6 @@
 
         <activity
             android:name=".ui.graphs.SingleLineChart"
-            android:launchMode="singleInstance"
             android:parentActivityName=".ui.graphs.ChartScreenActivity"
             android:screenOrientation="landscape"
             android:windowSoftInputMode="stateHidden"
@@ -102,7 +96,6 @@
 
         <activity
             android:name=".ui.graphs.DoubleLineActivity"
-            android:launchMode="singleInstance"
             android:parentActivityName=".ui.graphs.ChartScreenActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
@@ -114,7 +107,6 @@
 
         <activity
             android:name=".ui.graphs.HorizontalBarChartActivity"
-            android:launchMode="singleInstance"
             android:parentActivityName=".ui.graphs.ChartScreenActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"
@@ -126,7 +118,6 @@
 
         <activity
             android:name=".ui.graphs.VerticalBarChartActivity"
-            android:launchMode="singleInstance"
             android:parentActivityName=".ui.graphs.ChartScreenActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden"

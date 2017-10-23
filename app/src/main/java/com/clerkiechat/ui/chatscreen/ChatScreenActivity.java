@@ -108,7 +108,6 @@ public class ChatScreenActivity extends AppCompatActivity {
         firebaseStorage = FirebaseStorage.getInstance();
         firebaseDatabase = FirebaseDatabase.getInstance();
 
-        databaseReference = firebaseDatabase.getReference().child("messages");
         databaseUserReference = firebaseDatabase.getReference().child("user");
         storageReference = firebaseStorage.getReference().child("chat_media");
 
@@ -122,6 +121,8 @@ public class ChatScreenActivity extends AppCompatActivity {
                 }
                 else {
                     hideProgress();
+                    databaseReference = databaseUserReference.child(user.getUid())
+                            .child("messages");
                     databaseUserReference.child(user.getUid())
                             .addValueEventListener(new ValueEventListener() {
                                 @Override

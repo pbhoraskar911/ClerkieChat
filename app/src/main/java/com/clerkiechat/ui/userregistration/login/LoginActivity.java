@@ -144,7 +144,7 @@ public class LoginActivity extends AppCompatActivity implements LoginViewInterfa
                         }
 
                         if (!ViewUtils.checkPasswordValidity(passwordEditText)) {
-                            passwordEditText.setError(getString(R.string.invalid_password));
+                            passwordEditText.setError(getString(R.string.invalid_password_details));
                         }
                     }
                 }
@@ -154,9 +154,7 @@ public class LoginActivity extends AppCompatActivity implements LoginViewInterfa
                 break;
             case R.id.button_signup:
                 Intent intent = new Intent(this, SignUpActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NO_HISTORY);
                 startActivity(intent);
-                finish();
                 break;
         }
 

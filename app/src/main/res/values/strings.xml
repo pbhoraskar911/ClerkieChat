@@ -25,6 +25,8 @@
     <string name="phone_hint">Phone# (Only US numbers with no dashes)</string>
     <string name="confirm_password_hint">Confirm Password</string>
     <string name="invalid_email">Invalid Email</string>
+    <string name="invalid_password_details">"Minimum 6 characters with atleast 1 number,
+        1 Capital Letter, 1 Small Letter, 1 Special character"</string>
     <string name="invalid_password">Invalid Password</string>
     <string name="passwords_no_match">Passwords do not match</string>
     <string name="invalid_phone">Invalid Phone Number (Only US numbers with no dashes)</string>
@@ -44,4 +46,5 @@
     <string name="vertical_bar_chart">Vertical Bar Chart</string>
     <string name="pie_chart">Pie Chart</string>
     <string name="double_line_chart">Double Line Chart</string>
+    <string name="registration_successful">Registration Successful.</string>
 </resources>
