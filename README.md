@@ -20,10 +20,9 @@ UI -
     - Double Line Chart
     - Vertical Bar Chart
     - Horizontal Bar Chart
-    - Pier Chart
+    - Pie Chart
 
 - Chat bot feature to create chat assistant
-
 
 Quality Assurance
   - Checkstyle, Findbugs, PMD and Lint for static code analysis
