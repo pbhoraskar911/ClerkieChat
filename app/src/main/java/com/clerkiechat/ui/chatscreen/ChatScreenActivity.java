@@ -51,6 +51,7 @@ import java.util.ArrayList;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import jp.wasabeef.recyclerview.animators.adapters.ScaleInAnimationAdapter;
 
 /**
  * Created by Pranav Bhoraskar
@@ -311,6 +312,16 @@ public class ChatScreenActivity extends AppCompatActivity {
         chatRecyclerView.setAdapter(chatRecyclerAdapter);
         chatRecyclerView.setLayoutManager(linearLayoutManager);
         chatRecyclerView.setHasFixedSize(true);
+
+        animateRecyclerView();
+    }
+
+    /**
+     * Animate Recycler View
+     */
+    private void animateRecyclerView() {
+        ScaleInAnimationAdapter adapter = new ScaleInAnimationAdapter(chatRecyclerAdapter);
+        chatRecyclerView.setAdapter(adapter);
     }
 
     private void displaySnackBar(String title) {
