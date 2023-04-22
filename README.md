@@ -1,4 +1,4 @@
-# ClerkieChat
+# ClerkieChat (not maintained)
 
 Technical Features
 
